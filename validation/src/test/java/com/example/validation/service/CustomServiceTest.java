@@ -6,8 +6,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import java.util.*;
+import static org.mockito.Mockito.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
 
 
 @RunWith(MockitoJUnitRunner.class)
@@ -25,6 +30,14 @@ public class CustomServiceTest {
         customerService.addCustomers(c3);
         customerService.addCustomers(c4);
     }
+
+
+    @Test
+    public void getCustomerById(){
+        CustomerModel customer = customerService.getCustomer("c1");
+        assertEquals("c1", customer.getCustomerId());
+    }
+
 
 
 }

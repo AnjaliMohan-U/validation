@@ -31,7 +31,7 @@ public class CustomerService {
 
     public CustomerModel removeCustomer(String customeId) {
         Optional<CustomerModel> remove_customer = customers.stream().filter(c -> c.getCustomerId().equals(customeId)).findFirst();
-        remove_customer.ifPresent(customerModel -> customers.remove(remove_customer));
+        remove_customer.ifPresent(customerModel -> customers.remove(remove_customer.get()));
         return remove_customer.get();
     }
 }

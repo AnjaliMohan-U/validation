@@ -34,9 +34,3 @@ public class CustomerController {
     }
 
 }
-//
-//    @PatchMapping("/patch")
-//    EmployeeModel update(@RequestParam Integer id, @RequestParam Integer phone) {
-//        //System.out.println("patch1");
-//        return employeeService.update(id, phone);
-//    }
